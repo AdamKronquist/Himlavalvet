@@ -1,0 +1,92 @@
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.AssemblyInfoInputs.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.AssemblyInfo.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.CoreCompileInputs.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.MvcApplicationPartsAssemblyInfo.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorAssemblyInfo.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorAssemblyInfo.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\appsettings.Development.json
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\appsettings.json
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.exe
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.deps.json
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.runtimeconfig.json
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.runtimeconfig.dev.json
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\ref\Himlavalvet.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.pdb
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.Views.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.Views.pdb
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\MySQLConnection.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\MySqlConnector.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\staticwebassets\Himlavalvet.StaticWebAssets.Manifest.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\staticwebassets\Himlavalvet.StaticWebAssets.xml
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\scopedcss\bundle\Himlavalvet.styles.css
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.TagHelpers.input.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.TagHelpers.output.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorCoreGenerate.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorTargetAssemblyInfo.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorTargetAssemblyInfo.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.Views.pdb
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.CopyComplete
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\ref\Himlavalvet.dll
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.pdb
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.genruntimeconfig.cache
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\CreateAccount.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Subjects.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\AddSubject.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Posts.cshtml.g.cs
+C:\Adam\Systemutvecklare .NET\1. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.AssemblyReference.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\appsettings.Development.json
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\appsettings.json
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.exe
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.deps.json
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.runtimeconfig.json
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.runtimeconfig.dev.json
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\ref\Himlavalvet.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.pdb
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.Views.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\Himlavalvet.Views.pdb
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\MySQLConnection.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\bin\Debug\net5.0\MySqlConnector.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.AssemblyReference.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.AssemblyInfoInputs.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.AssemblyInfo.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.CoreCompileInputs.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.MvcApplicationPartsAssemblyInfo.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorAssemblyInfo.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorAssemblyInfo.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\staticwebassets\Himlavalvet.StaticWebAssets.Manifest.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\staticwebassets\Himlavalvet.StaticWebAssets.xml
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\scopedcss\bundle\Himlavalvet.styles.css
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.TagHelpers.input.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.TagHelpers.output.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorCoreGenerate.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\AddSubject.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\CreateAccount.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Posts.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\Subjects.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorTargetAssemblyInfo.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.RazorTargetAssemblyInfo.cs
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.Views.pdb
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\ref\Himlavalvet.dll
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.pdb
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.genruntimeconfig.cache
+D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\obj\Debug\net5.0\Himlavalvet.csproj.CopyComplete

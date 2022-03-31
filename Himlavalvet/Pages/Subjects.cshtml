@@ -1,0 +1,125 @@
+﻿@page
+@model Himlavalvet.Pages.SubjectsModel
+
+@* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+<style>
+    .buttonStyle {
+        color: white;
+        border: 0px;
+        background: rgba(0, 0, 0, 0);
+        font-weight: bold;
+    }
+
+        .buttonStyle:hover {
+            text-decoration: underline;
+        }
+
+    .myContainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .myLink {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+        h3, th, td, h1, .myLink, .myLink:hover {
+            color: white;
+        }
+
+    h3 {
+        margin-top: 50px;
+    }
+
+    td {
+        font-weight: bold;
+        background-color: rgba(20, 75, 120, 0.33);
+    }
+
+    th {
+        background-color: rgba(20, 75, 120, 0.75);
+    }
+</style>
+
+
+@{
+//Är man inloggad så ser man en tabell med alla ämnen.
+    if (Program.signedIn)
+    {
+        string subject = Request.Query["subject"];
+        string post = Request.Query["post"];
+
+        //Om subjects är null har man kommit till denna via sidan genom att klicka på länken.
+        //Då ska ingenting särskilt hända.
+        if (subject == null)
+        {
+
+        }
+        //Annars har man kommit till denna sidan genom att skapa ett nytt ämne.
+        //Då ska ämnet och posten skrivas till respektive databas.
+        else
+        {
+            DateTime date = DateTime.Now;
+            DbHandler.WriteSubjectDb(subject, date, Program.username);
+            DbHandler.WriteNewPostToDb(Program.username, date, post, subject);
+        }
+
+        <h3>Alla ämnen</h3>
+
+        //En tabell som skriver ut alla ämnen
+        <table class="table">
+            <tr>
+                <th>Ämne</th>
+                <th>Antal inlägg</th>
+                <th>Senaste inlägg</th>
+                <th>Skapades</th>
+                <th>Skapad av</th>
+            </tr>
+            @{
+                DateTime time;
+                //Hämtar informationen med alla ämnen från databasen.
+                var dbSubjects = DbHandler.ReadSubjectsDb().Result;
+                var rows = dbSubjects.Split("\n");
+                for (int i = 0; i < rows.Length - 1; i++)
+                {
+                    var cells = rows[i].Split("\t");
+                    //Gör om cell[1] till DateTime format så att jag kan visa datumet på det sätt som jag vill.
+                    time = DateTime.Parse(cells[1]);
+
+                    //Läser antal poster det finns i varje ämne.
+                    string dbCount = DbHandler.ReadNumberOfPosts(cells[0]).Result;
+                    int number = Convert.ToInt32(dbCount);
+
+                    //Läser in när det senaste inlägget gjordes och vem som skrev det.
+                    string dbTime = DbHandler.ReadLastPosts(cells[0]).Result;
+                    var cellTime = dbTime.Split("\t");
+                    DateTime publishTime = DateTime.Parse(cellTime[0]);
+
+                    <tr>
+                        <td>
+                            <form method="get" action="Posts">
+                                <input class="buttonStyle" type="submit" name="subject" value="@cells[0]" />
+                            </form>
+                        </td>
+                        <td>@number</td>
+                        <td>@publishTime.ToString("d MMM yyy, kl HH:mm:ss"), av @cellTime[1]</td>
+                        <td>@time.ToString("d MMM yyy, kl HH:mm:ss")</td>
+                        <td>@cells[2]</td>
+                    </tr>
+                }
+            }
+        </table>
+    }
+    //Är man inte inloggad får man denna text istället för formuläret.
+    //Detta för att man måste vara inloggad för att komma åt något innehåll på sidan.
+    else
+    {
+        <div class="myContainer2">
+            <h1>För att komma åt den här sidan behöver du vara inloggad!</h1>
+            <a class="myLink" href="index">Till startsidan</a>
+        </div>
+    }
+}

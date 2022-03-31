@@ -1,0 +1,79 @@
+﻿@page
+@model Himlavalvet.Pages.CreateAccountModel
+
+@* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+<style>
+    .myContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .signInForm {
+        width: 40%;
+        background-color: rgba(20, 75, 120, 0.5);
+        border: 5px solid black;
+        border-radius: 20px;
+        padding: 20px 0px;
+        margin-top: 50px;
+    }
+
+    .mySignInContainer, .myInputContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .myButtonContainer {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+
+    h1, h3, label {
+        color: white;
+    }
+
+    input {
+        font-weight: bold;
+    }
+</style>
+
+@{
+}
+
+<div class="myContainer">
+    <h1>Himlavalvet</h1>
+    <h3>Skapa ett konto.</h3>
+
+    @* Ett formulär där man skapar ett nytt konto.
+        Formuläret skickas med POST för att lösenordet man väljer inte ska synas i adressfältet.
+        När man skapat sitt konto genom att trycka på submit-knappen länkas man till startsidan
+        där man nu är inloggad. *@
+    <div class="signInForm">
+        <div class="mySignInContainer">
+            <form method="post" asp-page="Index">
+                <div class="myInputContainer">
+                    <label for="email"><b>Email:</b></label>
+                    <input type="text" placeholder="Ange email" name="email" maxlength="50" required />
+                </div>
+                <div class="myInputContainer">
+                    <label for="username"><b>Användarnamn:</b></label>
+                    <input type="text" placeholder="Ange användarnamn" name="username" maxlength="15" required />
+                </div>
+                <div class="myInputContainer">
+                    <label for="password"><b>Lösenord:</b></label>
+                    <input type="password" placeholder="Ange lösenord" name="password" maxlength="15" required />
+                </div>
+                <div class="myButtonContainer">
+                    <button type="submit" class="btn btn-primary"><b>Skapa konto</b></button>
+                </div>
+                <input type="hidden" name="status" value="CreateAccount" />
+            </form>
+        </div>
+    </div>
+</div>

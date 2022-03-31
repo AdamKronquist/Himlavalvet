@@ -1,0 +1,197 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+<style>
+    .myContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .signInForm {
+        width: 40%;
+        background-color: rgba(20, 75, 120, 0.5);
+        border: 5px solid black;
+        border-radius: 20px;
+        padding: 20px 0px;
+        margin-top: 50px;
+    }
+
+    .mySignInContainer, .myInputContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .myButtonContainer {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        align-items: baseline;
+        justify-content: space-evenly;
+    }
+
+    .btn {
+        margin-left: 10px;
+    }
+
+    .buttonStyle {
+        color: blue;
+        border: 0px;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .buttonStyle:hover {
+        text-decoration: underline;
+    }
+
+    .userContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        background-color: rgba(20, 45, 85, 0.5);
+        padding: 20px;
+        border-radius: 15px;
+        border: 5px solid black;
+    }
+
+    h1, h2, h3, h4, label, a, th, td, a:hover {
+        color: white;
+    }
+
+    input {
+        font-weight: bold;
+    }
+</style>
+
+@{
+    //Om man kommer till den här sidan via ett POST-formulär ska nödvändiga variablar sparas ner.
+    if (ViewContext.HttpContext.Request.Method == "POST")
+    {
+        string email = Request.Form["email"];
+        string password = Request.Form["password"];
+        string username = Request.Form["username"];
+        //Variabeln status har jag skapat för att veta vilka olika formulär det är som skickas data.
+        //Beroende på dess text så är det olika saker som skickas med.
+        string status = Request.Form["status"];
+
+        //Om det man försöker göra är att logga in.
+        if (status == "SignIn")
+        {
+            //För att logga in använder man email och lösenord.
+            //Då skickas ett POST-formuler med enbart email och lösenord i informationen. För att det inte ska synas i addressfältet.
+            //Det betyder att den ska försöka läsa från databasen och se om den hittar någon träff på den angivna emailen och lösenordet.
+            var dbUser = DbHandler.readDBUser(email, password).Result;
+            string test = dbUser;
+            //Om dbUser inte är en tom sträng betyder det att det fanns en träff i databasen och inloggningen lyckades.
+            //Användarnamnet sätts till dbUser för att kunna komma åts på alla sidor. Tar bort de två sista tecknena då dessa blev \t\n och förstörde databasen.
+            //signedIn ändras till true för att hemsidan ska veta att man är inloggad.
+            if (dbUser != "")
+            {
+                Program.username = dbUser.Substring(0, dbUser.Length - 2);
+                Program.signedIn = true;
+            }
+            else
+            {
+                Program.signedIn = false;
+            }
+        }
+        //Om statusen är CreateAccount så har man precis skapat ett konto.
+        else if (status == "CreateAccount")
+        {
+            //Man ska bli automatiskt inloggad med de uppgifter man precis angett.
+            //Och uppgifterna läggs till i databasen.
+            DbHandler.WriteUserToDb(email, password, username);
+            Program.username = username;
+            Program.signedIn = true;
+        }
+        //Om statusen är SignOut vill man logga ut.
+        else if (status == "SignOut")
+        {
+            //Då vill man bara loggas ut och variabeln för username ska tömmas.
+            Program.username = "";
+            Program.signedIn = false;
+        }
+        else if(status == "FakeSignIn")
+        {
+            Program.username = "Fejkare";
+            Program.signedIn = true;
+        }
+    }
+}
+
+<div class="myContainer">
+    <h1>Välkommen till himlavalvet</h1>
+
+    @if (Program.signedIn)
+    {
+        //Om man är inloggad står ens användarnamn på startsidan
+        <h2>@Program.username</h2>
+    }
+    //Är man inte inloggad finns det ett formulär med inloggningsuppgifter.
+    else
+    {
+        <h2>- Allt mellan himmel och sol -</h2><br />
+        <h3>För att använda forumet måste du vara inloggad.</h3>
+        <div class="signInForm">
+            <div class="mySignInContainer">
+                <form method="post" action="">
+                    <div class="myInputContainer">
+                        <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Ange email" name="email" maxlength="50" required />
+                    </div>
+                    <div class="myInputContainer">
+                        <label for="password"><b>Lösenord:</b></label>
+                        <input type="password" placeholder="Ange lösenord" name="password" maxlength="15" required />
+                    </div>
+                    <div class="myButtonContainer">
+                        <button type="submit" class="btn btn-primary"><b>Logga in</b></button>
+                        <a href="CreateAccount"><b>Skapa ett konto</b></a>
+                    </div>
+                    <input type="hidden" name="status" value="SignIn" />
+                </form>
+                @* Fuskinloggning ifall man inte kommer åt databasen men ska logga in. *@
+                <form method="post" action="">
+                    <div class="myButtonContainer">
+                        <button type="submit" class="btn btn-danger"><b>Fuskinloggning</b></button>
+                    </div>
+                    <input type="hidden" name="status" value="FakeSignIn" />
+                </form>
+            </div>
+        </div>
+        //En tabell med tre användare som finns skapade i databasen för att man ska kunna logga in, lägga till och skriva i poster.
+        <div class="userContainer">
+            <h4>Skapa ett eget konto eller använd något av de förvalda</h4>
+            <table class="table">
+                <tr>
+                    <th>Email</th>
+                    <th>Lösenord</th>
+                    <th>Användarnamn</th>
+                </tr>
+                <tr>
+                    <td>erik@hotmail.com</td>
+                    <td>Pluto9</td>
+                    <td>Astrologen</td>
+                </tr>
+                <tr>
+                    <td>jens@passagen.se</td>
+                    <td>Vintergatan</td>
+                    <td>Stjärnfallet</td>
+                </tr>
+                <tr>
+                    <td>hugo@gmail.com</td>
+                    <td>rymdraket</td>
+                    <td>Tellus66</td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>
+
+

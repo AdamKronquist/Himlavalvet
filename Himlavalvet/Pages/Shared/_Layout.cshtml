@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Himlavalvet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+    <style>
+        header {
+            background-color: rgb(10, 30, 60);
+        }
+
+        h3, p {
+            color: white;
+        }
+
+        .logOutContainer {
+            display: flex;
+        }
+
+        .btnLogOut {
+            color: white;
+            border: 0px;
+            background: rgba(0, 0, 0, 0);
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+            .btnLogOut:hover {
+                text-decoration: underline;
+            }
+
+        .userContainer > div {
+            margin-left: 20px;
+        }
+
+        .myLinks {
+            font-size: x-large;
+        }
+
+        .myTextLink {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+            .myTextLink:hover {
+                text-decoration: underline;
+            }
+
+        body {
+            background-image: url(/images/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+    @if (Program.signedIn)
+    {
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><h1>Himlavalvet</h1></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="myLinks">
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                @* Länk till att skapa ett nytt ämne. *@
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-page="/AddSubject"><p class="myTextLink"><b>Skapa ny tråd</b></p></a>
+                                </li>
+                                @* Länk till att visa alla trådar. *@
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-page="/Subjects"><p class="myTextLink"><b>Visa alla trådar</b></p></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    @* Container för ens anvädarnamn och logga ut-knapp när man är inloggad. *@
+                    <div class="logOutContainer">
+                        <div><p><b>Välkommen @Program.username</b></p></div>
+                        <div>
+                            <form method="Post" asp-page="Index">
+                                <input class="btnLogOut" type="submit" value="Logga ut" />
+                                <input type="hidden" name="status" value="SignOut" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    }
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

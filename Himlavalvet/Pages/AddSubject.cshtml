@@ -1,0 +1,96 @@
+﻿@page
+@model Himlavalvet.Pages.AddSubjectModel
+
+@* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+<style>
+    .myContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .signInForm {
+        width: 40%;
+        background-color: rgba(20, 75, 120, 0.5);
+        border: 5px solid black;
+        border-radius: 20px;
+        padding: 20px 0px;
+        margin-top: 50px;
+    }
+
+    .mySignInContainer, .myInputContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .myButtonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    h1, label, a, th, td, a:hover, .myLink:hover, h3 {
+        color: white;
+    }
+
+    input, textarea, .myLink {
+        font-weight: bold;
+    }
+
+    .myLink {
+        font-size: x-large;
+    }
+
+    .myContainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    h3 {
+        margin-top: 50px;
+    }
+</style>
+
+@* Om besökaren är inloggad visas formuläret för att skapa ett nytt ämne. *@
+@{ if (Program.signedIn)
+    {
+        <h3 class="text-center">Skapa ett nytt ämne.</h3>
+        <div class="myContainer">
+            <div class="signInForm">
+                <div class="mySignInContainer">
+                    @* Formulär för att skapa ett nytt ämne.
+                        Skickas med GET för att jag vill att informationen ska synas i adressfältet.
+                        När man klickat på submit länkas man vidare till sidan där alla ämnen visas,
+                        så att man antingen kan gå in på sitt egna ämne och skriva något mer eller gå in på
+                        någon annans för att skriva något där istället. *@
+                    <form method="get" action="Subjects">
+                        <div class="myInputContainer">
+                            <label for="subject"><b>Ämne:</b></label>
+                            <input type="text" placeholder="Ange ämne" name="subject" required maxlength="50" />
+                        </div>
+                        <div class="myInputContainer">
+                            <label for="post"><b>Ditt inlägg:</b></label>
+                            <textarea rows="5" name="post" placeholder="Skriv det du vill här" required maxlength="200"></textarea>
+                        </div>
+                        <div class="myButtonContainer">
+                            <button type="submit" class="btn btn-primary"><b>Skapa och lägg upp</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    }
+    //Är man inte inloggad får man denna text istället för formuläret.
+    //Detta för att man måste vara inloggad för att komma åt något innehåll på sidan.
+    else
+    {
+        <div class="myContainer2">
+            <h1>För att komma åt den här sidan behöver du vara inloggad!</h1>
+            <a class="myLink" href="index">Till startsidan</a>
+        </div>
+    }
+}

@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Himlavalvet
+build_property.ProjectDir = D:\Backup Adam\PC\Systemutvecklare .NET\9. Webbapplikationer och mobil utveckling\Inlämning_3\Himlavalvet\Himlavalvet\

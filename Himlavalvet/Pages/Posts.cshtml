@@ -1,0 +1,165 @@
+﻿@page
+@model Himlavalvet.Pages.PostsModel
+
+@* Min egna CSS då det var krångligt att kombinera tillsammans med Bootstrap. *@
+<style>
+    .myContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .signInForm {
+        width: 100%;
+        background-color: rgba(20, 75, 120, 0.5);
+        border: 5px solid black;
+        border-radius: 20px;
+    }
+
+    .mySignInContainer, .myInputContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .myButtonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .myForm {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .postHeader {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(20, 75, 120, 0.75);
+    }
+
+    .myTable {
+        width: 100%;
+    }
+
+    .postContainer {
+        margin-top: 15px;
+        background-color: rgba(20, 75, 120, 0.66);
+        padding: 15px;
+        border: 5px solid black;
+        border-radius: 15px;
+    }
+
+    .myContainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    h3, td, h1, .myLink, .myLink:hover, label {
+        color: white;
+    }
+
+    textarea {
+        font-weight: bold;
+    }
+
+    .myLink {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    h3 {
+        margin-top: 50px;
+    }
+</style>
+
+@{
+//Om man är inloggad kan man läsa de olika posterna som finns i ämnet.
+    if (Program.signedIn)
+    {
+        string subject = Request.Query["subject"];
+        string post = Request.Query["post"];
+        string status = Request.Query["status"];
+
+        //Om status = newPost har man gjort ett nytt inlägg och då ska den skriva till databasen
+        //innan den läser från den.
+        //Då används variabeln sunject för att veta i vilket ämne posten tillhör. Och variabeln post
+        //används för att man ska veta vad som skrivits.
+        if (status == "newPost")
+        {
+            DateTime date = DateTime.Now; //DateTime.Now för att datumet som registreras ska vara exakt när man skriver det.
+            DbHandler.WriteNewPostToDb(Program.username, date, post, subject); //Skriver ner posten till databasen.
+        }
+
+        <h3>@subject</h3>
+
+        <div class="row">
+            <div class="col-6">
+                @* En tabell där alla inlägg med ett visst ämne skrivs ut. *@
+                <table class="myTable">
+                    @{
+                        //När man klickar sig fram till denna sida bestäms det vad subject ska få för text.
+                        //Därefter hämtas alla poster som innehåller det ämnet från databasen.
+                        var dbSubjects = DbHandler.readDBAllPosts(subject).Result;
+                        var rows = dbSubjects.Split("\n");
+                        for (int i = 0; i < rows.Length - 1; i++)
+                        {
+                            var cells = rows[i].Split("\t");
+                            DateTime date = DateTime.Parse(cells[1]);
+                            <tr>
+                                <td>
+                                    <div class="postContainer">
+                                        <p class="postHeader">Skrivet av <b>@cells[0]</b> <i>@date.ToString("d MMM yyy, kl HH:mm:ss")</i></p>
+                                        <p><b>@cells[2]</b></p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+
+            <div class="col-6">
+
+                @* Ett formulär för att skapa ett nytt inlägg i det ämne som man befinner sig i.
+                    Så man inte behöver byta sida för att skriva ett nytt inlägg.*@
+                <div class="myContainer">
+                    <div class="signInForm">
+                        <div class="mySignInContainer">
+                            @* Formulär för att skapa ett nytt ämne. 
+                                Metoden är GET så att sakerna syns i adressfältet och action är tom för att
+                                man ska stanna kvar på samma sida när man klickat på submit-knappen. *@
+                            <form method="get" action="">
+                                <div class="myInputContainer">
+                                    <label for="post"><b>Skriv ditt inlägg här:</b></label>
+                                    <textarea rows="5" name="post" placeholder="Skriv det du vill här" maxlength="200" required></textarea>
+                                </div>
+                                <div class="myButtonContainer">
+                                    <button type="submit" class="btn btn-primary"><b>Posta</b></button>
+                                    @* En dold input med ett fast värde. Värdet är det ämne som man är inne på
+                                        så att sidan vet vilken ämne posten hör till. *@
+                                    <input type="hidden" name="subject" value="@subject" />
+                                    @* En dold variabel med värdet newPost. Det gör att jag vet att när man är färdig med formuläret
+                                        händer det som sker på rad 91 i koden.*@
+                                    <input type="hidden" name="status" value="newPost" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    //Är man inte inloggad får man denna text istället för formuläret.
+    //Detta för att man måste vara inloggad för att komma åt något innehåll på sidan.
+    else
+    {
+        <div class="myContainer2">
+            <h1>För att komma åt den här sidan behöver du vara inloggad!</h1>
+            <a class="myLink" href="index">Till startsidan</a>
+        </div>
+    }
+}
